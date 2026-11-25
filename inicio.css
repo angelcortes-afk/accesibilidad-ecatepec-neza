@@ -1,0 +1,1431 @@
+/* ====================================== */
+/* CONFIGURACIÓN GENERAL */
+/* ====================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    font-family: "Segoe UI", sans-serif;
+
+    background: #f5f7fa;
+
+    color: #1d1d1d;
+
+    line-height: 1.7;
+
+}
+
+
+/* ====================================== */
+/* ENCABEZADO */
+/* ====================================== */
+
+.encabezado {
+
+    background: #EEF3F8;
+
+    color: #13294B;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+}
+
+
+.logos {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 40px;
+
+    margin-bottom: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.logos img {
+
+    height: 120px;
+
+    object-fit: contain;
+
+}
+
+
+.encabezado h2 {
+
+    font-size: 2rem;
+
+    margin-bottom: 10px;
+
+}
+
+
+.encabezado h3 {
+
+    font-weight: 400;
+
+    margin-bottom: 5px;
+
+}
+
+
+.encabezado p {
+
+    margin-top: 15px;
+
+     color: #444;
+
+}
+
+
+/* ====================================== */
+/* PORTADA */
+/* ====================================== */
+
+.hero {
+
+    position: relative;
+
+    height: 85vh;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+.hero-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.45)
+        ),
+        url("fondo_metro.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    transition: opacity 1.5s ease;
+
+}
+
+.overlay {
+
+    position: relative;
+
+    z-index: 10;
+
+}
+
+.hero p {
+
+    margin-top: 25px;
+
+    font-size: 1.1rem;
+
+}
+
+
+.autor {
+
+    font-size: 1.3rem;
+
+    font-weight: bold;
+
+    color: #8C6D1F;
+
+}
+
+
+/* ====================================== */
+/* SECCIONES */
+/* ====================================== */
+
+.contenido {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 70px 30px;
+
+}
+
+
+.contenido h2 {
+
+    text-align: center;
+
+    color: #13294B;
+
+    margin-bottom: 35px;
+
+    font-size: 2rem;
+
+}
+
+
+.contenido p {
+
+    max-width: 950px;
+
+    margin: auto;
+
+    margin-bottom: 15px;
+
+    text-align: justify;
+
+}
+
+
+/* ====================================== */
+/* TARJETAS */
+/* ====================================== */
+
+.tarjetas {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 25px;
+
+}
+
+
+.tarjeta {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+
+}
+
+
+.tarjeta:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+.tarjeta h3 {
+
+    color: #13294B;
+
+    margin-bottom: 10px;
+
+}
+
+.hallazgo-centro{
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px #103d80 (0,0,0,0.1);
+
+    transition: 0.3s;
+
+    grid-column: 2 / 3;
+
+    transition: 0.3s;
+    
+}
+
+/* ====================================== */
+/* LEYENDA */
+/* ====================================== */
+
+.leyenda {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+
+}
+
+
+.leyenda p {
+
+    text-align: left;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* ====================================== */
+/* CONTACTO */
+/* ====================================== */
+
+.contenido strong {
+
+    color: #13294B;
+
+}
+
+
+/* ====================================== */
+/* VISOR */
+/* ====================================== */
+
+.visor {
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background: #13294B;
+
+    color: white;
+
+}
+
+
+.visor h2 {
+
+    margin-bottom: 30px;
+
+}
+
+
+.boton {
+
+    display: inline-block;
+
+    background: #D4AF37;
+
+    color: #13294B;
+
+    text-decoration: none;
+
+    font-size: 1.2rem;
+
+    font-weight: bold;
+
+    padding: 18px 40px;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+
+}
+
+
+.boton:hover {
+
+    background: white;
+
+}
+
+
+/* ====================================== */
+/* RESPONSIVE */
+/* ====================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        flex-direction: column;
+
+        height: auto;
+
+        padding: 15px;
+
+        gap: 15px;
+
+    }
+
+    .logos-nav img {
+
+        height: 45px;
+
+    }
+
+    .menu {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+
+    }
+
+    .overlay h1 {
+
+        font-size: 2.2rem;
+
+        max-width: 90%;
+
+    }
+
+    .overlay h2 {
+
+        font-size: 1.2rem;
+
+    }
+
+    .overlay p {
+
+        font-size: 1rem;
+
+    }
+
+    .hero-btn {
+
+        padding: 12px 24px;
+
+        font-size: .9rem;
+
+    }
+
+    .contenedor-transporte {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .contenedor-municipios {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .contenedor-metodologia {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+.titulo-principal {
+
+    max-width: 1100px;
+
+    margin: 30px auto;
+
+    text-align: center;
+
+    font-size: 3rem;
+
+    line-height: 1.3;
+
+    color: #13294B;
+
+}
+
+.institucion {
+
+    text-align: center;
+
+    margin-bottom: 6px;
+
+    font-size: 1.1rem;
+
+}
+
+.materia {
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+
+}
+
+.subtitulo {
+
+    text-align: center;
+
+    font-size: 1.2rem;
+
+    margin-top: 25px;
+
+}
+
+.separador {
+
+    width: 200px;
+
+    margin: 25px auto;
+
+    border: none;
+
+    border-top: 2px solid #13294B;
+
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+.navbar {
+
+    height: 90px;
+
+    background: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 50px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+
+}
+
+.logos-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+.logos-nav img {
+
+    height: 75px;
+
+}
+
+.logos-nav .logo-ig{
+
+    height: 105px;
+
+}
+
+.menu {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+.menu a {
+
+    text-decoration: none;
+
+    color: #13294B;
+
+    font-weight: bold;
+
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.overlay h1 {
+
+    font-size: 4.5rem;
+
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    max-width: 1200px;
+
+    color: white;
+
+}
+
+.overlay h2 {
+
+    color: white;
+
+    font-size: 2rem;
+
+    margin-top: 20px;
+
+}
+
+.overlay p {
+
+    margin-top: 25px;
+
+    font-size: 1.4rem;
+
+    color: white;
+
+    font-weight: 500;
+
+}
+
+.hero-btn {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    background: #D4AF37;
+
+    color: black;
+
+    text-decoration: none;
+
+    padding: 16px 35px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+}
+
+.info {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 40px 40px;
+
+    text-align: center;
+
+}
+
+.info h2 {
+
+    font-size: 3rem;
+
+    color: #13294B;
+
+    margin-bottom: 30px;
+
+}
+
+.info p {
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    margin-bottom: 20px;
+
+}
+/* ========================= */
+/* TRANSPORTE */
+/* ========================= */
+
+.transportes {
+
+    padding: 100px 50px;
+
+    background: white;
+
+}
+
+.transportes h2 {
+
+    text-align: center;
+
+    font-size: 3rem;
+
+    color: #13294B;
+
+    margin-bottom: 70px;
+
+}
+
+.contenedor-transporte {
+
+    max-width: 1300px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+.card-transporte {
+
+    background: #f5f7fa;
+
+    border-radius: 15px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+
+    transition: .3s;
+
+}
+
+.card-transporte:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.card-transporte img {
+
+    height: 110px;
+
+    margin-bottom: 20px;
+
+}
+
+.card-transporte h3 {
+
+    color: #13294B;
+
+    margin-bottom: 20px;
+
+    font-size: 2rem;
+
+}
+
+.card-transporte p {
+
+    line-height: 1.8;
+
+}
+
+/* ========================= */
+/* MUNICIPIOS */
+/* ========================= */
+
+.municipios {
+
+    padding: 100px 50px;
+
+    background: #f5f7fa;
+
+}
+
+.municipios h2 {
+
+    text-align: center;
+
+    font-size: 3rem;
+
+    color: #13294B;
+
+    margin-bottom: 70px;
+
+}
+
+.contenedor-municipios {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 40px;
+
+}
+
+.municipio-card {
+
+    background: white;
+
+    padding: 50px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.municipio-card h3 {
+
+    color: #13294B;
+
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+
+}
+
+.municipio-card p {
+
+    line-height: 1.8;
+
+}
+
+.foto-municipio {
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    margin-bottom: 25px;
+
+}
+.credito-imagen {
+
+    margin-top: 10px;
+
+    font-size: .85rem;
+
+    color: #777;
+
+    text-align: center;
+
+    font-style: italic;
+
+}
+
+.metodologia-web {
+
+    padding: 100px 50px;
+
+    background: white;
+
+}
+
+.metodologia-web h2 {
+
+    text-align: center;
+
+    font-size: 3rem;
+
+    color: #13294B;
+
+    margin-bottom: 70px;
+
+}
+
+.contenedor-metodologia {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+
+}
+
+.metodo-card {
+
+    background: #f5f7fa;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+
+    transition: .3s;
+
+}
+
+.metodo-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.metodo-card h3 {
+
+    color: #13294B;
+
+    margin-bottom: 15px;
+
+}
+
+/* ========================= */
+/* CONTACTO */
+/* ========================= */
+
+.contacto {
+
+    padding: 70px 50px;
+
+    background: #ffffff;
+
+    text-align: center;
+
+}
+
+.contacto h2 {
+
+    font-size: 3rem;
+
+    color: #13294B;
+
+    margin-bottom: 40px;
+
+}
+
+.contacto p {
+
+    margin-bottom: 12px;
+
+    font-size: 1.1rem;
+
+}
+
+.contacto p:last-child {
+
+    color: #13294B;
+
+    font-weight: bold;
+
+}
+
+/* ========================= */
+/* VISOR FINAL */
+/* ========================= */
+
+.visor-final {
+
+    text-align: center;
+
+    padding: 120px 50px;
+
+    background: #13294B;
+
+    color: white;
+
+}
+
+.visor-final h2 {
+
+    font-size: 3rem;
+
+    margin-bottom: 25px;
+
+}
+
+.visor-final p {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    margin-bottom: 40px;
+
+    font-size: 1.2rem;
+
+}
+
+.btn-visitar {
+
+    display: inline-block;
+
+    background: #D4AF37;
+
+    color: #13294B;
+
+    text-decoration: none;
+
+    padding: 18px 45px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    transition: .3s;
+
+}
+
+.btn-visitar:hover {
+
+    background: white;
+
+}
+
+/* ====================================== */
+/* RESPONSIVE FINAL */
+/* ====================================== */
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+
+        flex-direction: column;
+
+        height: auto;
+
+        padding: 15px;
+
+    }
+
+    .logos-nav {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+    }
+
+    .logos-nav img {
+
+        height: 45px;
+
+    }
+
+    .menu {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+
+    }
+
+    .menu a {
+
+        font-size: .9rem;
+
+    }
+
+    .overlay h1 {
+
+        font-size: 2.3rem !important;
+
+        line-height: 1.15;
+
+        padding: 0 15px;
+
+    }
+
+    .overlay h2 {
+
+        font-size: 1.2rem;
+
+        padding: 0 15px;
+
+    }
+
+    .overlay p {
+
+        font-size: 1rem;
+
+    }
+
+    .hero-btn {
+
+        padding: 12px 25px;
+
+        font-size: .9rem;
+
+    }
+
+    .info h2,
+    .transportes h2,
+    .municipios h2,
+    .metodologia-web h2,
+    .contacto h2,
+    .visor-final h2 {
+
+        font-size: 2rem;
+
+    }
+
+    .contenedor-transporte,
+    .contenedor-municipios,
+    .contenedor-metodologia {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .transportes,
+    .municipios,
+    .metodologia-web,
+    .contacto,
+    .visor-final {
+
+        padding: 60px 20px;
+
+    } 
+
+}
+
+/* ====================================== */
+/* JUSTIFICACIÓN Y OBJETIVO */
+/* ====================================== */
+
+.info-proyecto{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:100px 40px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.info-card{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,.08);
+
+}
+
+.info-card h2{
+
+    color:#13294B;
+
+    margin-bottom:20px;
+
+}
+
+.info-card p{
+
+    line-height:1.8;
+
+    margin-bottom:15px;
+
+}
+
+@media screen and (max-width:768px){
+
+    .info-proyecto{
+
+        grid-template-columns:1fr;
+
+        padding:60px 20px;
+
+    }
+
+}
+
+/* ====================== */
+/* TARJETAS PROYECTO */
+/* ====================== */
+
+.cards-proyecto{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:80px 40px;
+
+    display:grid;
+
+    gap:20px;
+
+}
+
+.card-proyecto{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    cursor:pointer;
+}
+
+
+.card-proyecto:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.icono-proyecto{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+.card-proyecto{
+
+    border-top:5px solid #D4AF37;
+
+}
+
+/* ====================== */
+/* ESTADISTICAS */
+/* ====================== */
+
+.estadisticas{
+
+    max-width:1400px;
+
+    margin:0 auto 100px auto;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+
+.estadistica{
+
+    background:#13294B;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px 20px;
+
+    border-radius:15px;
+
+    border-top:5px solid #D4AF37;
+
+    transition:.3s;
+
+}
+
+.estadistica:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.numero-estadistica{
+
+    display:block;
+
+    font-size:3.2rem;
+
+    font-weight:700;
+
+    color:#D4AF37;
+
+    line-height:1;
+
+    letter-spacing:1px;
+
+}
+
+.texto-estadistica{
+
+    display:block;
+
+    margin-top:14px;
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    letter-spacing:.5px;
+
+    color:rgba(255,255,255,.85);
+
+}
+
+.unidad-estadistica{
+
+    display:block;
+
+    margin-top:-8px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    color:#D4AF37;
+
+    letter-spacing:1px;
+
+}
+
+/* ====================================== */
+/* FUNDAMENTOS DEL PROYECTO */
+/* ====================================== */
+
+.fundamentos{
+
+    max-width:1600px;
+
+    margin:auto;
+
+    padding:30px 40px;
+
+}
+
+.fundamentos h2{
+
+    text-align:center;
+
+    font-size:3rem;
+
+    color:#13294B;
+
+    margin-bottom:35px;
+
+}
+
+.fundamentos-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(500px,1fr));
+
+    gap:40px;
+
+}
+
+.fundamento-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    border-top:5px solid #D4AF37;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.fundamento-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.fundamento-card h3{
+
+    color:#13294B;
+
+    margin-bottom:20px;
+
+    font-size:1.6rem;
+
+}
+
+.fundamento-card p{
+
+    text-align:justify;
+
+    line-height:1.9;
+
+}
+
+@media(max-width:768px){
+
+    .fundamentos-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+.magnitud{
+
+    text-align:center;
+
+    max-width:900px;
+
+    margin:0 auto 40px auto;
+
+}
