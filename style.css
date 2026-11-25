@@ -123,25 +123,35 @@ header {
 
 }
 
-.btn-index {
+.btn-index{
 
-    background: rgba(255,255,255,.15);
+    background: rgba(255,255,255,.20);
 
     color: white;
 
     text-decoration: none;
 
-    padding: 10px 16px;
+    padding: 12px 20px;
 
-    border-radius: 8px;
+    border-radius: 10px;
 
-    font-weight: bold;
+    font-weight: 600;
 
     position: absolute;
 
-    top: 40px;
+    top: 35px;
 
     right: 25px;
+
+    transition: .3s ease;
+
+}
+
+.btn-index:hover{
+
+    background: white;
+
+    color: #13294B;
 
 }
 
