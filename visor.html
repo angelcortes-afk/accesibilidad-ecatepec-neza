@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SIG Web - Accesibilidad al Transporte Público</title>
+
+    <!-- Leaflet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- Nuestros estilos -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logos-header">
+
+    <img
+        src="LOGO_UNAM.png"
+        class="logo-unam"
+        alt="UNAM"
+    >
+
+    <img
+        src="LOGO_ENCIT.png"
+        class="logo-encit"
+        alt="ENCIT"
+    >
+
+    <img
+        src="IG_LOGO.png"
+        class="logo-ig"
+        alt="IG"
+    >
+
+</div>
+
+
+    <div class="titulo">
+
+        <h1>
+    Accesibilidad al Transporte Público Masivo
+</h1>
+
+<p>
+    Ecatepec de Morelos y Nezahualcóyotl
+</p>
+
+<p class="autor-proyecto">
+
+    Ángel Alberto Cortés Olivares
+
+</p>
+
+<p>
+
+    Diseño de Sistemas de Información Geográfica
+
+</p>
+
+    </div>
+
+    <a href="index.html" class="btn-index">
+
+    ← Inicio
+
+</a>
+
+</header>
+
+
+
+<div class="aplicacion">
+
+
+    <!-- ======================== -->
+    <!-- PANEL LATERAL -->
+    <!-- ======================== -->
+
+    <aside>
+
+
+        <h2>Control de capas</h2>
+
+
+        <div class="grupo">
+
+            <label>
+                <input
+                    type="checkbox"
+                    id="capaManzanas"
+                    checked
+                >
+                Manzanas censales
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    id="capaMetro"
+                    checked
+                >
+                Metro
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    id="capaMetrobus"
+                    checked
+                >
+                Metrobús
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    id="capaMexibus"
+                    checked
+                >
+                Mexibús
+            </label>
+
+
+            <label>
+                <input
+                    type="checkbox"
+                    id="capaCobertura"
+                    checked
+                >
+                Áreas de influencia
+            </label>
+
+            <label>
+
+<input
+    type="checkbox"
+    id="capaSinCobertura"
+    checked
+>
+
+Manzanas sin cobertura
+
+</label>
+
+
+        </div>
+
+
+
+        <!-- FILTRO MUNICIPIO -->
+
+        <h2>Municipio</h2>
+
+
+        <select id="municipio">
+
+            <option value="todos">
+                Ambos municipios
+            </option>
+
+            <option value="ecatepec">
+                Ecatepec de Morelos
+            </option>
+
+            <option value="neza">
+                Nezahualcóyotl
+            </option>
+
+        </select>
+
+
+
+        <!-- LEYENDA -->
+
+        <h2>Accesibilidad</h2>
+
+
+        <div class="leyenda">
+
+
+            <div class="elemento-leyenda">
+
+                <span class="cuadro alta"></span>
+
+                <span>
+                    Alta accesibilidad (500 m)
+                </span>
+
+            </div>
+
+
+            <div class="elemento-leyenda">
+
+                <span class="cuadro media"></span>
+
+                <span>
+                    Accesibilidad media (1000 m)
+                </span>
+
+            </div>
+
+
+            <div class="elemento-leyenda">
+
+                <span class="cuadro baja"></span>
+
+                <span>
+                    Baja accesibilidad (1500 m)
+                </span>
+
+            </div>
+
+            <div class="elemento-leyenda">
+    <span
+        class="cuadro"
+        style="background:#6A1B9A;">
+    </span>
+    <span>
+        Sin cobertura
+    </span>
+</div>
+
+
+        </div>
+
+
+
+        <!-- INFORMACIÓN -->
+
+        <div class="descripcion">
+
+            <h3>Acerca del proyecto</h3>
+
+            <p>
+                Proyecto académico de la materia 
+                diseño de distemas de información geográfica, 
+                elaborado por Ángel Alberto Cortés Olivares.
+
+                ENCiT - UNAM
+            </p>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ======================== -->
+    <!-- CONTENIDO -->
+    <!-- ======================== -->
+
+
+    <main>
+
+
+        <!-- INDICADORES -->
+
+       <section class="indicadores">
+
+    <div class="tarjeta">
+        <span
+            class="numero"
+            id="indicadorPoblacion"
+        >
+            --
+        </span>
+        <span class="nombre-indicador">
+            Población analizada
+        </span>
+    </div>
+
+    <div class="tarjeta">
+        <span
+            class="numero"
+            id="indicadorManzanas"
+        >
+            --
+        </span>
+        <span class="nombre-indicador">
+            Manzanas analizadas
+        </span>
+    </div>
+
+    <div class="tarjeta">
+        <span
+            class="numero"
+            id="indicadorSinCobertura"
+        >
+            --
+        </span>
+        <span class="nombre-indicador">
+            Población sin cobertura
+        </span>
+    </div>
+
+    <div class="tarjeta">
+
+    <span
+        class="numero"
+        id="indicadorViviendasSinCobertura"
+    >
+        --
+    </span>
+
+    <span class="nombre-indicador">
+        Viviendas sin cobertura
+    </span>
+
+</div>
+
+    <div class="tarjeta">
+        <span
+            class="numero"
+            id="indicadorCobertura"
+        >
+            --
+        </span>
+        <span class="nombre-indicador">
+            Población cubierta
+        </span>
+    </div>
+
+</section>
+
+        <!-- MAPA -->
+
+        <div id="map"></div>
+
+
+
+        <!-- INFORMACIÓN DE MANZANA -->
+
+        <div id="panelInformacion">
+
+
+            <h3>Información de la manzana</h3>
+
+
+            <p>
+                Selecciona una manzana en el mapa
+                para consultar su información.
+            </p>
+
+
+            <hr>
+
+
+            <p>
+                <strong>CVEGEO:</strong>
+                <span id="infoCvegeo">
+                    -
+                </span>
+            </p>
+
+
+            <p>
+                <strong>Municipio:</strong>
+                <span id="infoMunicipio">
+                    -
+                </span>
+            </p>
+
+
+            <p>
+                <strong>Población:</strong>
+                <span id="infoPoblacion">
+                    -
+                </span>
+            </p>
+
+
+            <p>
+                <strong>Viviendas:</strong>
+                <span id="infoViviendas">
+                    -
+                </span>
+            </p>
+
+
+            <p>
+                <strong>Accesibilidad:</strong>
+                <span id="infoAccesibilidad">
+                    -
+                </span>
+            </p>
+
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- Leaflet -->
+
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+
+<!-- Nuestro JavaScript -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
